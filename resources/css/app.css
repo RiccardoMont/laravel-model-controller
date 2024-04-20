@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+}
+
+.container {
+    width: 80%;
+    max-width: 1176px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    margin: 0 -1rem;
+}
+
+
+.card{
+    width: calc(100%/12*3 - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid rgb(0, 0, 170);
+    background-color: rgb(212, 212, 60);
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem ;
+    cursor: pointer;
+
+    & .vote{
+        position: relative;
+        right: -150px;
+        color: rgb(107, 107, 39);
+        
+
+        & span{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+
+}
