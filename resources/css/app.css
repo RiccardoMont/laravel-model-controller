@@ -1,3 +1,4 @@
+/*GENERAL REGION*/
 * {
     padding: 0;
     margin: 0;
@@ -6,6 +7,14 @@
 
 body{
     font-family: "Roboto Mono", monospace;
+    background-color: var(--body-color);
+}
+
+:root{
+    --body-color: #ffbc008c;
+    --card-border-blue: #0000aa;
+    --card-bg-yellow: #d4d43c;
+    --card-vote-gold: #6b6b27;
 }
 
 .container {
@@ -21,21 +30,73 @@ body{
     margin: 0 -1rem;
 }
 
+/*END GENERAL REGION*/
+
+/*HEADER REGION*/
+.header{
+    justify-content: center;
+    
+
+    & ul{
+        list-style: none;
+        display: flex;
+
+
+        & li {
+            padding: 16px;
+
+
+            & a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+
+        & li:hover{
+            font-weight: 600;
+            border: 2px solid var(--card-border-blue);
+            padding: 14px;
+            border-top: 0;
+            background-color: var(--card-bg-yellow);
+        }
+
+    }
+
+
+}
+
+
+
+/*END HEADER REGION*/
+
+/*MAIN REGION*/
+h1{
+    text-align: center;
+    margin: 1rem 0;
+}
+
 
 .card{
     width: calc(100%/12*3 - 2rem);
     margin: 1rem;
     padding: 1rem;
-    border: 2px solid rgb(0, 0, 170);
-    background-color: rgb(212, 212, 60);
+    border: 2px solid var(--card-border-blue);
+    background-color: var(--card-bg-yellow);
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem ;
     cursor: pointer;
+   
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 170px;
+    justify-content: space-between;
+
 
     & .vote{
         position: relative;
         right: -150px;
-        color: rgb(107, 107, 39);
+        color: var(--card-vote-gold);
         
 
         & span{
@@ -45,3 +106,21 @@ body{
     }
 
 }
+/*END MAIN REGION*/
+
+/*FOOTER REGION*/
+
+footer{
+    background-color: var(--card-bg-yellow);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem;
+
+    & span{
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+/*END FOOTER REGION*/

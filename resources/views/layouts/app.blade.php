@@ -17,7 +17,7 @@
     
 
     @include('partials.header')
-    <h1>A classic movie list</h1>
+    <h1>A CLASSIC MOVIE LIST</h1>
     <main>
         @yield('content')
     </main>
